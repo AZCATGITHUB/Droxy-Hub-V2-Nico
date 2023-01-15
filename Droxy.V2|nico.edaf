@@ -1,0 +1,331 @@
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+local Window = Rayfield:CreateWindow({
+   Name = "Droxy Hub V2",
+   LoadingTitle = "Welcome To Droxy Hub",
+   LoadingSubtitle = "by AZCATGITHUB",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "ABCD", -- The Discord invite code, do not include discord.gg/
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Droxy",
+      Subtitle = "Key",
+      Note = "https://pastebin.com/8xwD3Uus",
+      FileName = "DroxyKey",
+      SaveKey = true,
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = "9fastaughcfffatjdowao2139fknaksmx" --[9fastaughcfffatjdowao2139fknaksmx
+   }
+})
+
+local Tab = Window:CreateTab("Main", 4483362458) 
+local Section = Tab:CreateSection("Auto Farm")
+
+local Toggle = Tab:CreateToggle({
+   Name = "Auto Farm",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+if Value then
+local StarterGui = game:GetService("StarterGui")
+StarterGui:SetCore("SendNotification", {
+Title = "Droxy Core";
+Text = "Loading"
+})
+wait(0.001)
+while true do
+wait(3)
+local TweenService = game:GetService("TweenService")
+local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(3, Enum.EasingStyle.Quint, Enum.EasingDirection.Out,0,false,0), 
+{CFrame = CFrame.new(-882.045227, 13.9830894, -293.11441, -0.999310136, 6.96402788e-12, 0.0371379517, 5.35967538e-12, 1, -4.3299378e-11, -0.0371379517, -4.30704604e-11, -0.999310136)}):Play()
+wait(3.5)
+local TweenService = game:GetService("TweenService")
+local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Quint, Enum.EasingDirection.Out,0,false,0), 
+{CFrame = CFrame.new(108.720085, 116.483101, -755.610474, 0.996981263, -1.66630043e-11, -0.0776428357, 1.0295007e-11, 1, -8.24168303e-11, 0.0776428357, 8.13686965e-11, 0.996981263)}):Play()
+wait(2.2)
+local TweenService = game:GetService("TweenService")
+local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Quint, Enum.EasingDirection.Out,0,false,0), 
+{CFrame = CFrame.new(247.385208, 87.265976, -428.62677, 0.463909537, 1.08161147e-10, 0.885882556, -2.92677964e-13, 1, -1.21940957e-10, -0.885882556, 5.63102967e-11, 0.463909537)}):Play()
+wait(2.2)
+local TweenService = game:GetService("TweenService")
+local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Quint, Enum.EasingDirection.Out,0,false,0), 
+{CFrame = CFrame.new(-1625.42761, -211.366943, 56.8904076, -0.999995708, 1.57065177e-11, -0.00292842626, 1.60292751e-11, 1, -1.10191405e-10, 0.00292842626, -1.10237867e-10, -0.999995708)}):Play()
+wait(2)
+end
+else
+local StarterGui = game:GetService("StarterGui")
+StarterGui:SetCore("SendNotification", {
+Title = "Droxy Core";
+Text = "Will Reset in: 3"
+})
+wait(1)
+local StarterGui = game:GetService("StarterGui")
+StarterGui:SetCore("SendNotification", {
+Title = "Droxy Core";
+Text = "Will Reset in: 2"
+})
+wait(1)
+local StarterGui = game:GetService("StarterGui")
+StarterGui:SetCore("SendNotification", {
+Title = "Droxy Core";
+Text = "Will Reset in: 1"
+})
+wait(1)
+local StarterGui = game:GetService("StarterGui")
+StarterGui:SetCore("SendNotification", {
+Title = "Droxy Core";
+Text = "Succes Reset and Remove Old Points"
+})
+wait(0.001)
+game.Players.LocalPlayer.Character.HumanoidRootPart:Destroy()
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end
+   end,
+})
+
+local Label = Tab:CreateLabel("Smooth Auto farm")
+
+local Toggle = Tab:CreateToggle({
+   Name = "Smooth Auto Farm",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(SH)
+if SH then
+local Noclip = Instance.new("Part",Workspace)
+   Noclip.Name = "Noclip"
+   Noclip.CanCollide = true
+   Noclip.Anchored = true
+   Noclip.Transparency = 0.7
+    Noclip.CastShadow = false
+   Noclip.BrickColor = BrickColor.new("Bright red")
+   Noclip.Material = "Neon"
+   Noclip.Size = Vector3.new(7,0.6,7)
+function Noclip()
+game:GetService("Workspace"):FindFirstChild("Noclip").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-4.45,0)
+end
+_G.Noclip = true --Set Disable/Enable here (false / true)
+while _G.Noclip do wait(-200)
+pcall(function()
+Noclip()
+end)
+end
+else
+do
+local NM = game:GetService("Workspace"):FindFirstChild("Noclip")
+if NM then
+  NM:Destroy()
+  end
+end
+local Noclip = Instance.new("Part",Workspace)
+   Noclip.Name = "Noclip"
+   Noclip.CanCollide = true
+   Noclip.Anchored = true
+   Noclip.Transparency = 0.7
+    Noclip.CastShadow = false
+   Noclip.BrickColor = BrickColor.new("Lapis")
+   Noclip.Material = "Neon"
+   Noclip:Destroy()
+function Noclip()
+game:GetService("Workspace"):FindFirstChild("Noclip").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-4,0)
+end
+_G.Noclip = true --Set Disable/Enable here (false / true)
+while _G.Noclip do wait(-200)
+pcall(function()
+Noclip()
+end)
+end
+end
+   end,
+})
+
+local Tab = Window:CreateTab("Teleport", 4335479148)
+local Section = Tab:CreateSection("Teleport")
+
+local Label = Tab:CreateLabel("Safe zone")
+local Button = Tab:CreateButton({
+   Name = "Safe zone #1",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-794.999573, -2.68762279, -61.7583237, 0.0087223649, -1.56309932e-30, 0.999961972, 1.47276394e-31, 1, 1.56187417e-30, -0.999961972, 1.3364756e-31, 0.0087223649)
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Safe zone #2",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1193.65747, 12.8123751, -50.0627022, -0.0031063552, -7.04239271e-12, -0.999995172, -2.78296691e-11, 1, -6.95597746e-12, 0.999995172, 2.78079261e-11, -0.0031063552)
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Safe zone #3",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1300.20703, 24.4497261, 54.7152023, 0.030852912, -3.44263767e-12, -0.999523938, -1.56920657e-11, 1, -3.92865384e-12, 0.999523938, 1.58058046e-11, 0.030852912)
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Safe zone #4",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-858.192017, 12.8056154, -251.701584, 0.00432652235, 4.60517692e-12, 0.999990642, -1.79747571e-11, 1, -4.52745133e-12, -0.999990642, -1.79550021e-11, 0.00432652235)
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Safe zone #5",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1145.57507, 78.58284, 119.67511, 0.999984026, 1.65359965e-11, 0.00565507682, -1.65127322e-11, 1, -4.16067831e-12, -0.00565507682, 4.06723093e-12, 0.999984026)
+   end,
+})
+
+local Label = Tab:CreateLabel("Map")
+
+local Button = Tab:CreateButton({
+   Name = "Teleport To mall",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-885.709351, 27.7633438, -325.432922, 0.872489154, 2.89023701e-11, 0.488633484, -2.90316538e-11, 1, -7.3113425e-12, -0.488633484, -7.80677085e-12, 0.872489154)
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Teleport To russia",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-135.079712, 11.9330034, -422.979187, 0.99999845, 5.9782847e-21, 0.00174911413, -5.96912877e-21, 1, -5.23986526e-21, -0.00174911413, 5.22941645e-21, 0.99999845)
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Teleport To Backrooms",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1946.52881, -211.366943, 56.1185303, -0.819155812, -8.96272408e-22, -0.573571086, -1.3456203e-21, 1, 3.59153931e-22, 0.573571086, 1.06601195e-21, -0.819155812)
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Teleport To big maze",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-570.233521, 136.3983, 200.248169, 1, -1.52005687e-13, 7.58582609e-24, 1.52005687e-13, 1, -4.10314076e-14, -7.57958857e-24, 4.10314076e-14, 1)
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Teleport To Dream maze",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1726.99988, 63.03722, -1461.99988, -1, -4.02079816e-23, -0, -4.02079816e-23, 1, 4.78242916e-23, -0, 4.78242916e-23, -1)
+   end,
+})
+
+local Tab = Window:CreateTab("Character", 6961018899)
+local Section = Tab:CreateSection("Local Character")
+
+local Button = Tab:CreateButton({
+   Name = "Fast Walk Speed",
+   Callback = function()
+while true do
+wait(0.01)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 300
+end
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Boost Speed",
+   Callback = function()
+while true do
+wait(0.01)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 125
+end
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Reset Walk Speed",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart:Destroy()
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Freeze",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Fr)
+if Fr then
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+else
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+end
+   end,
+})
+
+local Tab = Window:CreateTab("Esp Not Working", 4431164390) -- Title, Image
+local Section = Tab:CreateSection("Esp")
+
+local Label = Tab:CreateLabel("Bots Esp")
+
+local Toggle = Tab:CreateToggle({
+   Name = "Esp Bots",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(esp)
+if esp then
+  print(esp)
+else
+  print(esp)
+end
+   end,
+})
+
+local Label = Tab:CreateLabel("Player Esp")
+
+local Toggle = Tab:CreateToggle({
+   Name = "Esp Box",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(plesp)
+if plesp then
+  print(plesp)
+else
+  print(plesp)
+end
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Esp Tracker",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(t)
+if t then
+  print(t)
+else
+  print(t)
+end
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Esp Name",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(te)
+if t then
+  print(te)
+else
+  print(te)
+end
+   end,
+})
+
+local Tab = Window:CreateTab("Credit", 4483362458) -- Title, Image
+local Section = Tab:CreateSection("Credits")
+
+local Label = Tab:CreateLabel("Made by GTAOCGG1412")
+local Label = Tab:CreateLabel("Tester Mexricker")
